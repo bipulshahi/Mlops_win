@@ -31,17 +31,23 @@ python setup.py sdist bdist_wheel
 
 # Upload your files & folder to git
 
-# using distribution package from GIT
-virtualenv ml_package2
-ml_package2\Scripts\activate
-pip install git+https://github.com/bipulshahi/loanapp.git
+# install required python version
+* Download the Python 3.12 installer for your operating system from the official Python website.
+* Install Python 3.12 but do not add it to PATH during installation if you're on Windows. This ensures it doesn't interfere with the default Python.
+* pip install virtualenv
+* virtualenv -p C:\Users\vipul\AppData\Local\Programs\Python\Python312\python.exe ml_package1
+* 
 
-python
-import Myloanapp
-from Myloanapp import trainingpipeline
-trainingpipeline.perform_training()
-import pandas as pd
-test_data = pd.read_csv('C:/Users/vipul/ml_package2/Lib/site-packages/Myloanapp/datasets/test_loan.csv')
-from Myloanapp import predict
-predict.generate_predictions(test_data[:1])
+# using distribution package from GIT
+* ml_package1\Scripts\activate
+* pip install git+https://github.com/bipulshahi/loanapp.git
+
+* python
+* import Myloanapp
+* from Myloanapp import trainingpipeline
+* trainingpipeline.perform_training()
+* import pandas as pd
+* test_data = pd.read_csv('C:/Users/vipul/ml_package2/Lib/site-packages/Myloanapp/datasets/test_loan.csv')
+* from Myloanapp import predict
+* predict.generate_predictions(test_data[:1])
 
